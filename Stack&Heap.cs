@@ -5,7 +5,7 @@
     {
         public class Persona
         {
-            public string Nombre { get; set; }
+            public string? Nombre { get; set; }
             public int Edad { get; set; }
         }
         
@@ -53,7 +53,7 @@
             // 'p1' es una variable de referencia (tipo Persona), 
             // pero el objeto 'new Persona()' se crea en el Heap.
             // La variable 'p1' en el Stack solo almacena la dirección de memoria donde reside el objeto en el Heap.
-            Persona p1 = new Persona { Nombre = "Ana", Edad = 30 };
+            Persona p1 = new() { Nombre = "Ana", Edad = 30 };
 
             // 'p2' también es una variable de referencia. Apunta al mismo objeto en el Heap que p1.
             Persona p2 = p1;
